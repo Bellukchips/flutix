@@ -1,0 +1,101 @@
+{
+  "project_info": {
+    "project_number": "1095975572928",
+    "firebase_url": "https://flutix-1e489.firebaseio.com",
+    "project_id": "flutix-1e489",
+    "storage_bucket": "flutix-1e489.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1095975572928:android:0548cc4e942a7f3d29e425",
+        "android_client_info": {
+          "package_name": "com.bellukstudio.flutix"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1095975572928-h2rhd2k67ugord6e95noes69m8930l5q.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.bellukstudio.flutix",
+            "certificate_hash": "b2965b5a55e2a299f64077a2caf5481a68a007bd"
+          }
+        },
+        {
+          "client_id": "1095975572928-j39dh5s2je50alhn4svcc706vgmu6klb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.bellukstudio.flutix",
+            "certificate_hash": "665e1625dc1d54ad15fe6b1372292d1c6c759e68"
+          }
+        },
+        {
+          "client_id": "1095975572928-evje0i2i44a45ubsamit497uh94ft8a1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAvzFWPeKQr1HshQxI0RS3ayN3VPVRaM1k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1095975572928-evje0i2i44a45ubsamit497uh94ft8a1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1095975572928:android:9fa57ab505dff6fc29e425",
+        "android_client_info": {
+          "package_name": "com.flutix.flutix"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1095975572928-42jo3dcuk84t932rrgrv4iq4hj0pjipf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.flutix.flutix",
+            "certificate_hash": "3e46fec71d33bf4370efc469dcc11491e3a2e690"
+          }
+        },
+        {
+          "client_id": "1095975572928-5ipjj63gufm6u0gkuodpcfumnp87r45i.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.flutix.flutix",
+            "certificate_hash": "665e1625dc1d54ad15fe6b1372292d1c6c759e68"
+          }
+        },
+        {
+          "client_id": "1095975572928-evje0i2i44a45ubsamit497uh94ft8a1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAvzFWPeKQr1HshQxI0RS3ayN3VPVRaM1k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1095975572928-evje0i2i44a45ubsamit497uh94ft8a1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
