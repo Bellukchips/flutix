@@ -4,11 +4,17 @@ class Wrapper extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     FirebaseUser firebaseUser = Provider.of<FirebaseUser>(context);
+    ConnectivityStatus connectionStatus =
+        Provider.of<ConnectivityStatus>(context);
     PreferenceManager.getPreferences(context);
     if (firebaseUser == null) {
       if (!(prevPageEvent is GoToSplashScreen)) {
         prevPageEvent = GoToSplashScreen();
         context.bloc<PageBloc>().add(prevPageEvent);
+      } else if (connectionStatus == ConnectivityStatus.Offline) {
+        context.bloc<PageBloc>().add(GoToNetworkPage(() {
+          context.bloc<PageBloc>().add(GoToLoginPage());
+        }));
       }
     } else {
       if (!(prevPageEvent is GoToMainPage)) {
@@ -18,6 +24,10 @@ class Wrapper extends StatelessWidget {
           prevPageEvent = GoToMainPage();
           context.bloc<PageBloc>().add(prevPageEvent);
         });
+      } else if (connectionStatus == ConnectivityStatus.Offline) {
+        context.bloc<PageBloc>().add(GoToNetworkPage(() {
+          context.bloc<PageBloc>().add(GoToMainPage());
+        }));
       }
     }
     return BlocBuilder<PageBloc, PageState>(
@@ -89,9 +99,13 @@ class Wrapper extends StatelessWidget {
                                                                                           ? WalletPage(pageState.pageEvent)
                                                                                           : (pageState is OnBlankPage)
                                                                                               ? BlankScreen()
-                                                                                              :(pageState is OnGenresMovie)
-                                                                                              ? GenresMovie(genre: pageState.genre,)
-                                                                                              : Container(),
+                                                                                              : (pageState is OnGenresMovie)
+                                                                                                  ? GenresMovie(
+                                                                                                      genre: pageState.genre,
+                                                                                                    )
+                                                                                                  : (pageState is OnNetworkPage)
+                                                                                                      ? NetworkSensitive(pageState.refresh)
+                                                                                                      : Container(),
     );
   }
 }

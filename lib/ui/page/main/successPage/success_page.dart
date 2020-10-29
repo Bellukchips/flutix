@@ -74,9 +74,7 @@ class SuccessPage extends StatelessWidget {
                     context
                         .bloc<PageBloc>()
                         .add(GoToWallettPage(GoToMainPage()));
-                    context.bloc<UserBloc>().add(LoadUser(transaction.userID));
                   } else {
-                    context.bloc<UserBloc>().add(LoadUser(transaction.userID));
                     context.bloc<TicketBloc>().add(ClearLoadTicket());
                     context
                         .bloc<PageBloc>()
@@ -107,7 +105,6 @@ class SuccessPage extends StatelessWidget {
                 ),
                 InkWell(
                   onTap: () {
-                    context.bloc<UserBloc>().add(LoadUser(transaction.userID));
                     context.bloc<TicketBloc>().add(ClearLoadTicket());
                     context.bloc<PageBloc>().add(GoToMainPage());
                   },

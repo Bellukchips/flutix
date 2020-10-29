@@ -153,7 +153,16 @@ class GoToGenresMovie extends PageEvent {
   @override
   List<Object> get props => [genre];
 }
-class GoToBlankPage extends PageEvent{
+
+class GoToBlankPage extends PageEvent {
   @override
   List<Object> get props => [];
+}
+
+class GoToNetworkPage extends PageEvent {
+  final Function refresh;
+
+  GoToNetworkPage(this.refresh);
+  @override
+  List<Object> get props => [refresh];
 }

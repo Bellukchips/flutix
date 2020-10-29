@@ -158,7 +158,15 @@ class OnGenresMovie extends PageState {
   @override
   List<Object> get props => [genre];
 }
-class OnBlankPage extends PageState{
+
+class OnBlankPage extends PageState {
   @override
   List<Object> get props => [];
+}
+
+class OnNetworkPage extends PageState {
+  final Function refresh;
+  OnNetworkPage(this.refresh);
+  @override
+  List<Object> get props => [refresh];
 }

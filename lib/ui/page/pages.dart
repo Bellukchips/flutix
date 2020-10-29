@@ -54,4 +54,5 @@ part 'main/movie/booking/select_seat_page.dart';
 part 'main/movie/booking/selectSchedule_page.dart';
 part 'main/walletPage/walletPage.dart';
 part 'splash/blankScreen.dart';
+part 'splash/network_sensitive.dart';
 part 'main/movie/genres/genre_movie.dart';

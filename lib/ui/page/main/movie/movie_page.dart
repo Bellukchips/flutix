@@ -20,14 +20,6 @@ class _MoviePageState extends State<MoviePage> {
             child: BlocBuilder<UserBloc, UserState>(
               builder: (_, userState) {
                 if (userState is UserLoaded) {
-                  // if (imageFileToUpload != null) {
-                  //   uploadImage(imageFileToUpload).then((downloadURL) {
-                  //     imageFileToUpload = null;
-                  //     context
-                  //         .bloc<UserBloc>()
-                  //         .add(UpdateData(profileImage: downloadURL));
-                  //     context.bloc<UserBloc>().add(LoadUser(userState.user.id));
-                  //   });
                   return Row(
                     children: [
                       Container(

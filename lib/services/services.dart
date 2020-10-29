@@ -1,6 +1,8 @@
+import 'dart:async';
 import 'dart:convert';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:connectivity/connectivity.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutix/models/models.dart';
 import 'package:flutix/shared/shared.dart';
@@ -14,3 +16,4 @@ part '../ui/page/auth/service/users_services.dart';
 part '../ui/page/main/service/flutix_transaction_services.dart';
 part '../ui/page/main/service/movie_service.dart';
 part '../ui/page/main/service/tiket_services.dart';
+part 'connectivity_services.dart';

@@ -7,6 +7,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:provider/provider.dart';
 
+import 'shared/shared.dart';
 import 'ui/page/pages.dart';
 
 void main() {
@@ -47,8 +48,16 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
-    return StreamProvider.value(
-      value: AuthServices.userStream,
+    return MultiProvider(
+      providers: [
+        StreamProvider.value(
+          value: AuthServices.userStream,
+        ),
+        StreamProvider<ConnectivityStatus>(
+          create: (context) =>
+              ConnectivityService().connectionController.stream,
+        )
+      ],
       child: MultiBlocProvider(
           providers: [
             BlocProvider(

@@ -10,3 +10,4 @@ part 'shared_value.dart';
 part 'theme.dart';
 part 'shared_methods.dart';
 part 'strings.dart';
+part 'enums.dart';

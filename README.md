@@ -1,8 +1,8 @@
-# flutix
+# Flutix
 
 A new Flutter project.
 
-## Getting Started
+## Flutix Release On Google Play
 
 This project is a starting point for a Flutter application.
 

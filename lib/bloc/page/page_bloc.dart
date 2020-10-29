@@ -63,6 +63,8 @@ class PageBloc extends Bloc<PageEvent, PageState> {
       yield OnProsessTransactionsPage(event.ticket, event.transaction);
     } else if (event is GoToBlankPage) {
       yield OnBlankPage();
+    } else if (event is GoToNetworkPage) {
+      yield OnNetworkPage(event.refresh);
     }
   }
 }
