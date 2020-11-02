@@ -105,7 +105,9 @@ class Wrapper extends StatelessWidget {
                                                                                                     )
                                                                                                   : (pageState is OnNetworkPage)
                                                                                                       ? NetworkSensitive(pageState.refresh)
-                                                                                                      : Container(),
+                                                                                                      : (pageState is OnSplashPage)
+                                                                                                          ? SplashPage()
+                                                                                                          : Container(),
     );
   }
 }

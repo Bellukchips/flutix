@@ -6,6 +6,16 @@ class ProfileSettings extends StatefulWidget {
 }
 
 class _ProfileSettingsState extends State<ProfileSettings> {
+  launchUrl() async {
+    var url =
+        "https://play.google.com/store/apps/details?id=com.bellukstudio.flutix&reviewId=0";
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
+
   ///
   ///
   //bottom sheet modal lang
@@ -284,22 +294,25 @@ class _ProfileSettingsState extends State<ProfileSettings> {
                     child: generateDashedDivider(
                         MediaQuery.of(context).size.width - 2 * defaultMargin),
                   ),
-                  SizedBox(
-                    height: 50,
-                    child: Row(
-                      children: <Widget>[
-                        SizedBox(
-                            width: 24,
-                            height: 24,
-                            child: Image.asset("assets/rate.png")),
-                        SizedBox(
-                          width: 10,
-                        ),
-                        Text(
-                          AppLocalizations.of(context).translate('rateApp'),
-                          style: blackTextFont.copyWith(fontSize: 16),
-                        )
-                      ],
+                  InkWell(
+                    onTap: launchUrl,
+                    child: SizedBox(
+                      height: 50,
+                      child: Row(
+                        children: <Widget>[
+                          SizedBox(
+                              width: 24,
+                              height: 24,
+                              child: Image.asset("assets/rate.png")),
+                          SizedBox(
+                            width: 10,
+                          ),
+                          Text(
+                            AppLocalizations.of(context).translate('rateApp'),
+                            style: blackTextFont.copyWith(fontSize: 16),
+                          )
+                        ],
+                      ),
                     ),
                   ),
                   Container(
@@ -308,9 +321,9 @@ class _ProfileSettingsState extends State<ProfileSettings> {
                         MediaQuery.of(context).size.width - 2 * defaultMargin),
                   ),
                   InkWell(
-                    onTap:()async {
-                     await AuthServices.signOut();
-                     context.bloc<UserBloc>().add(SignOut());
+                    onTap: () async {
+                      await AuthServices.signOut();
+                      context.bloc<UserBloc>().add(SignOut());
                     },
                     child: SizedBox(
                       height: 50,
